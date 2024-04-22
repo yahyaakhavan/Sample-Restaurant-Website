@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarkhineh</title>
+    <link rel="stylesheet" href="./CssFiles/Mycss.css" />
+    <link rel="stylesheet" href="./CssFiles/Fonts.css" />
+  </head>
+  <body>
+    <div class="homePageContainer">
+      <div class="Base-Transparent-wrapper">
+        <div class="loginForm">
+          <div class="loginForm--header">
+            <span class="header__close" onclick="RemoveShowToBaseWrapper()">
+              <img src="./Assets/Images/close-circle.svg" alt="" />
+            </span>
+            <span class="header__img"
+              ><img src="./Assets/Images/LogoSmallSize.jpg" alt="LoginFormLogo"
+            /></span>
+          </div>
+          <div class="loginForm--detail">
+            <span class="detail__subject">ورود/ثبت نام</span>
+            <span class="detail__txt"
+              >با وارد کردن شماره موبایل کد تاییدی برای شما ارسال خواهد
+              شد.</span
+            >
+          </div>
+          <div class="loginForm--input">
+            <form>
+              <input
+                type="tel"
+                class="loginForm__tel"
+                placeholder="شماره همراه"
+              />
+              <button type="button" class="buttonDeactive">ادامه</button>
+            </form>
+          </div>
+          <div class="loginForm--footer">
+            ورود و عضویت در ترخینه به منزله قبول <a href="">قوانین و مقررات </a>
+            است.
+          </div>
+        </div>
+        <div class="loginform--ConfirmOTP hide loginForm">
+          <div class="ConfirmOTP loginForm--header">
+            <span class="ConfirmOTP--header__close">
+              <img src="./Assets/Images/arrow-circle-left.svg" alt="" />
+            </span>
+            <span class="header__img"
+              ><img src="./Assets/Images/LogoSmallSize.jpg" alt="LoginFormLogo"
+            /></span>
+          </div>
+          <div class="ConfirmOTP--body">
+            <span>کد تایید</span>
+            <span class="ConfirmOTP--body__custnum"></span>
+            <form action="">
+              <input class="otpInput" maxlength="1" type="text" />
+              <input class="otpInput" maxlength="1" type="text" />
+              <input class="otpInput" maxlength="1" type="text" />
+              <input class="otpInput" maxlength="1" type="text" />
+              <input class="otpInput" maxlength="1" type="text" />
+            </form>
+            <div class="ConfirmOTP--body__countdown__editnum">
+              <div class="ConfirmOTP--body__countdown">
+                <span class="countdown__icon"
+                  ><img src="./Assets/Images/clock.svg" alt="" /></span
+                ><span class="countdown__counter">1:59</span
+                ><span class="countdown__txt">تا دریافت مجدد کد</span>
+              </div>
+              <span class="ConfirmOTP--body__editnum">ویرایش شماره</span>
+            </div>
+            <div class="ConfirmOTP--footer">
+              <button class="ConfirmOTP button">ثبت کد</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="homepage">
+        <header>
+          <div class="container">
+            <div class="Header_wrapper">
+              <div class="Header__comboMenu">
+                <span
+                  ><svg class="icon">
+                    <use href="./Assets/Images/svg-sprite.svg#menu"></use>
+                  </svg>
+                </span>
+              </div>
+              <div class="Header_logo">
+                <picture>
+                  <source
+                    media="(min-width:800px)"
+                    srcset="./Assets/Images/LogoBigSize.jpg"
+                  />
+                  <source
+                    media="(max-width:799px)"
+                    srcset="./Assets/Images/LogoSmallSize.jpg"
+                  />
+
+                  <img
+                    class="Slider__Image"
+                    src="./Assets/Images/LogoBigSize.jpg"
+                    alt="logo"
+                  />
+                </picture>
+              </div>
+
+              <ul class="Header_items">
+                <li class="Header_item">
+                  <div class="header_item_wrapper">
+                    <div class="Header_item_txt" onclick="GetChild(this)">
+                      صفحه اصلی
+                    </div>
+                  </div>
+                </li>
+                <li class="Header_item">
+                  <div class="header_item_wrapper">
+                    <div class="Header_item_txt" onclick="GetChild(this)">
+                      شعبه
+                    </div>
+                    <span class="Header_item_arrow"
+                      ><svg class="icon">
+                        <use
+                          href="./Assets/Images/svg-sprite.svg#arrow-down"
+                        ></use></svg
+                    ></span>
+                  </div>
+                  <ul class="Header_item_dropdown">
+                    <li>اقدسیه</li>
+                    <li>ونک</li>
+                    <li>چالوس</li>
+                    <li>اکباتان</li>
+                  </ul>
+                </li>
+                <li class="Header_item">
+                  <div class="header_item_wrapper">
+                    <div class="Header_item_txt">منو</div>
+                    <span class="Header_item_arrow">
+                      <svg class="icon">
+                        <use
+                          href="./Assets/Images/svg-sprite.svg#arrow-down"
+                        ></use>
+                      </svg>
+                    </span>
+                  </div>
+                </li>
+                <li class="Header_item">
+                  <div class="Header_item_txt">اعطای نمایندگی</div>
+                </li>
+                <li class="Header_item">
+                  <div class="Header_item_txt">اعطای نمایندگی</div>
+                </li>
+                <li class="Header_item">
+                  <div class="Header_item_txt">تماس با ما</div>
+                </li>
+              </ul>
+
+              <div class="Header_icon">
+                <div class="Icon_wrapper">
+                  <span
+                    ><svg class="icon">
+                      <use
+                        href="./Assets/Images/svg-sprite.svg#search"
+                      ></use></svg
+                  ></span>
+                </div>
+                <div class="Icon_wrapper">
+                  <span
+                    ><svg class="icon">
+                      <use
+                        href="./Assets/Images/svg-sprite.svg#bag-happy"
+                      ></use></svg
+                  ></span>
+                </div>
+                <div class="Icon_wrapper">
+                  <span onclick="AddShowToBaseWrapper()"
+                    ><svg class="icon">
+                      <use
+                        href="./Assets/Images/svg-sprite.svg#user-frame"
+                      ></use></svg
+                  ></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <section class="slider">
+          <div class="slider-wrapper">
+            <picture>
+              <source
+                media="(min-width:800px)"
+                srcset="./Assets/Images/Slider_candidate_bigSize.jpg"
+              />
+              <source
+                media="(max-width:799px)"
+                srcset="./Assets/Images/Slider_candidate_smallSize.jpg"
+              />
+
+              <img
+                class="Slider__Image"
+                src="./Assets/Images/Slider_candidate.jpg"
+                alt="slider"
+              />
+            </picture>
+            <div class="Slider--Text">
+              <div class="Slider--Text__headline">
+                <h2>تجربه غذای سالم و گیاهی به سبک ترخینه</h2>
+              </div>
+              <div class="Slider--Text__button button">سفارش آنلاین غذا</div>
+            </div>
+            <div class="Slider--Eclipse">
+              <div class="Slider--Eclipse__pagination">
+                <div class="dot active__page"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+            </div>
+            <div class="Slider--navigate">
+              <span
+                ><svg class="icon">
+                  <use href="./Assets/Images/svg-sprite.svg#arrow-right"></use>
+                </svg>
+              </span>
+
+              <span
+                ><svg class="icon">
+                  <use href="./Assets/Images/svg-sprite.svg#arrow-left"></use>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </section>
+        <section class="menu container">
+          <div class="menu__wrapper">
+            <div class="menu__searchBox">
+              <input type="text" placeholder="جستجو" />
+              <span
+                ><svg class="icon">
+                  <use href="./Assets/Images/svg-sprite.svg#search"></use></svg
+              ></span>
+            </div>
+            <div class="menu__title"><h6>منوی رستوران</h6></div>
+            <div class="menu__items">
+              <div class="menu--item__Wrapper">
+                <div class="menu--item__img">
+                  <img src="./Assets/Images/MainCourse.jpg" alt="MainCourse" />
+                </div>
+                <div class="menu--item__txt button">غذای اصلی</div>
+              </div>
+              <div class="menu--item__Wrapper">
+                <div class="menu--item__img">
+                  <img src="./Assets/Images/Apptizer.jpg" alt="apptizer" />
+                </div>
+                <div class="menu--item__txt button">پیش غذا</div>
+              </div>
+              <div class="menu--item__Wrapper">
+                <div class="menu--item__img">
+                  <img src="./Assets/Images/dessert.jpg" alt="dessert" />
+                </div>
+                <div class="menu--item__txt button">دسر</div>
+              </div>
+              <div class="menu--item__Wrapper">
+                <div class="menu--item__img">
+                  <img src="./Assets/Images/drinks.jpg" alt="bevearges" />
+                </div>
+                <div class="menu--item__txt button">نوشیدنی</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="about">
+          <div class="about__wrapper">
+            <div class="about__img">
+              <div style="grid-area: 1/1/2/2">
+                <picture>
+                  <source
+                    media="(min-width:800px)"
+                    srcset="./Assets/Images/resturant_bigSize.png"
+                  />
+                  <source
+                    media="(max-width:799px)"
+                    srcset="./Assets/Images/resturant_SmallSize.svg"
+                  />
+
+                  <img
+                    src="./Assets/Images/resturant_bigSize.png"
+                    alt="about_us"
+                  />
+                </picture>
+              </div>
+
+              <div class="about__img__blackdiv">
+                <div class="about__img--text container">
+                  <div class="img--text__col1">
+                    <div class="img--text__col1__header">
+                      رستوران های زنجیره ای ترخینه
+                    </div>
+                    <div class="img--text__col1__body">
+                      <p>
+                        مهمان‌نوازی یکی از مهم‌ترین مشخصه‌های ایرانیان است و
+                        باعث افتخار ماست که بیش از 20 سال است خدمت‌گزار مردم
+                        شریف ایران هستیم. ما در رستوران‌های زنجیره‌ای ترخینه
+                        همواره تلاش کردیم که در محیطی اصیل بر پایه معماری و
+                        طراحی مدرن در کنار طبیعتی دلنواز، غذایی سالم و درخور شان
+                        شما عزیزان ارائه دهیم.
+                      </p>
+                    </div>
+                    <div class="img--text__col1__btn button2">
+                      اطلاعات بیشتر
+                      <span
+                        ><svg class="icon">
+                          <use
+                            href="./Assets/Images/svg-sprite.svg#arrow-left"
+                          ></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="img--text__col2__items">
+                    <div class="col2__item">
+                      <span class="col2__item__img"
+                        ><svg class="icon">
+                          <use href="./Assets/Images/svg-sprite.svg#user"></use>
+                        </svg>
+                      </span>
+                      <div class="col2__item__txt">پرسنل مجرب و حرفه ای</div>
+                    </div>
+                    <div class="col2__item">
+                      <span class="col2__item__img"
+                        ><svg class="icon">
+                          <use
+                            href="./Assets/Images/svg-sprite.svg#home-wifi"
+                          ></use>
+                        </svg>
+                      </span>
+                      <div class="col2__item__txt">محیطی دلنشین و آرام</div>
+                    </div>
+                    <div class="col2__item">
+                      <span class="col2__item__img"
+                        ><svg class="icon">
+                          <use
+                            href="./Assets/Images/svg-sprite.svg#diagram"
+                          ></use>
+                        </svg>
+                      </span>
+                      <div class="col2__item__txt">کیفیت بالای غذا ها</div>
+                    </div>
+                    <div class="col2__item">
+                      <span class="col2__item__img"
+                        ><svg class="icon">
+                          <use
+                            href="./Assets/Images/svg-sprite.svg#menu-board"
+                          ></use>
+                        </svg>
+                      </span>
+                      <div class="col2__item__txt">منوی متنوع</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="branches">
+          <div class="branches--wrapper container">
+            <span class="branches--header"><h4>ترخینه گردی</h4></span>
+            <div class="branches--details">
+              <div class="branches--details__item" onclick="AddActive(this)">
+                <div class="item__pic">
+                  <picture>
+                    <source
+                      media="(min-width:600px)"
+                      srcset="./Assets/Images/Ekbatan_map_b.jpg"
+                    />
+                    <source
+                      media="(max-width:599px)"
+                      srcset="./Assets/Images/Ekbatan_map_s.jpg"
+                    />
+
+                    <img
+                      src="./Assets/Images/Ekbatan_map.svg"
+                      alt="ekbatan_Branch"
+                    />
+                  </picture>
+                  <span class="item__pic__locationicon"
+                    ><svg class="icon">
+                      <use
+                        href="./Assets/Images/svg-sprite.svg#location-tick"
+                      ></use>
+                    </svg>
+                  </span>
+                  <div class="item__pic__activedDiv">
+                    <div class="first"></div>
+                    <div class="second"></div>
+                    <span class="third"
+                      ><svg class="icon">
+                        <use
+                          href="./Assets/Images/svg-sprite.svg#gallery"
+                        ></use>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="item__txt">
+                  <div class="item__txt__header">شعبه اکباتان</div>
+                  <div class="item__txt__add">
+                    شهرک اکباتان-فاز 3-مجتمع تجاری کوروش-طبقه سوم
+                  </div>
+                </div>
+                <div class="item__btn button">
+                  صفحه شعبه
+                  <span
+                    ><svg class="icon">
+                      <use
+                        href="./Assets/Images/svg-sprite.svg#arrow-left-green"
+                      ></use>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div class="branches--details__item" onclick="AddActive(this)">
+                <div class="item__pic">
+                  <picture>
+                    <source
+                      media="(min-width:600px)"
+                      srcset="./Assets/Images/Chalous_map_b.jpg"
+                    />
+                    <source
+                      media="(max-width:599px)"
+                      srcset="./Assets/Images/Chalous_map_s.jpg"
+                    />
+
+                    <img
+                      src="./Assets/Images/Ekbatan_map.svg"
+                      alt="ekbatan_Branch"
+                    />
+                  </picture>
+                  <span class="item__pic__locationicon"
+                    ><svg class="icon">
+                      <use
+                        href="./Assets/Images/svg-sprite.svg#location-tick"
+                      ></use>
+                    </svg>
+                  </span>
+                  <div class="item__pic__activedDiv">
+                    <div class="first"></div>
+                    <div class="second"></div>
+                    <span class="third"
+                      ><svg class="icon">
+                        <use
+                          href="./Assets/Images/svg-sprite.svg#gallery"
+                        ></use>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="item__txt">
+                  <div class="item__txt__header">شعبه چالوس</div>
+                  <div class="item__txt__add" style="font-size: 1.2rem">
+                    چالوس-خیابان 17 شهریور-بعد کوچه کوروش-جنب داروخانه دکتر
+                    میلانی
+                  </div>
+                </div>
+                <div class="item__btn button">
+                  صفحه شعبه
+                  <span
+                    ><svg class="icon">
+                      <use
+                        href="./Assets/Images/svg-sprite.svg#arrow-left-green"
+                      ></use>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div class="branches--details__item" onclick="AddActive(this)">
+                <div class="item__pic">
+                  <picture>
+                    <source
+                      media="(min-width:600px)"
+                      srcset="./Assets/Images/Aghdasiyeh_map_b.jpg"
+                    />
+                    <source
+                      media="(max-width:599px)"
+                      srcset="./Assets/Images/Aghdasiyeh_map_s.jpg"
+                    />
+
+                    <img
+                      src="./Assets/Images/Ekbatan_map.svg"
+                      alt="ekbatan_Branch"
+                    />
+                  </picture>
+                  <span class="item__pic__locationicon"
+                    ><svg class="icon">
+                      <use
+                        href="./Assets/Images/svg-sprite.svg#location-tick"
+                      ></use>
+                    </svg>
+                  </span>
+                  <div class="item__pic__activedDiv">
+                    <div class="first"></div>
+                    <div class="second"></div>
+                    <span class="third"
+                      ><svg class="icon">
+                        <use
+                          href="./Assets/Images/svg-sprite.svg#gallery"
+                        ></use>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="item__txt">
+                  <div class="item__txt__header">شعبه اقدسیه</div>
+                  <div class="item__txt__add">
+                    خیابان اقدسیه - نرسیده به میدان خیام - پلاک 8
+                  </div>
+                </div>
+                <div class="item__btn button">
+                  صفحه شعبه
+                  <span
+                    ><svg class="icon">
+                      <use
+                        href="./Assets/Images/svg-sprite.svg#arrow-left-green"
+                      ></use>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div class="branches--details__item" onclick="AddActive(this)">
+                <div class="item__pic">
+                  <picture>
+                    <source
+                      media="(min-width:600px)"
+                      srcset="./Assets/Images/Vanak_map_b.jpg"
+                    />
+                    <source
+                      media="(max-width:599px)"
+                      srcset="./Assets/Images/Vanak_map_s.jpg"
+                    />
+
+                    <img
+                      src="./Assets/Images/Ekbatan_map.svg"
+                      alt="ekbatan_Branch"
+                    />
+                  </picture>
+                  <span class="item__pic__locationicon"
+                    ><svg class="icon">
+                      <use
+                        href="./Assets/Images/svg-sprite.svg#location-tick"
+                      ></use>
+                    </svg>
+                  </span>
+                  <div class="item__pic__activedDiv">
+                    <div class="first"></div>
+                    <div class="second"></div>
+                    <span class="third"
+                      ><svg class="icon">
+                        <use
+                          href="./Assets/Images/svg-sprite.svg#gallery"
+                        ></use>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="item__txt">
+                  <div class="item__txt__header">شعبه ونک</div>
+                  <div class="item__txt__add">
+                    میدان ونک - خیابان فردوسی - نبش کوچه نیلوفر - پلاک 26
+                  </div>
+                </div>
+                <div class="item__btn button">
+                  صفحه شعبه
+                  <span
+                    ><svg class="icon">
+                      <use
+                        href="./Assets/Images/svg-sprite.svg#arrow-left-green"
+                      ></use>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer>
+          <div class="footer--wrapper">
+            <div class="footer--img">
+              <picture>
+                <source
+                  media="(min-width:800px)"
+                  srcset="./Assets/Images/Footer_Img_b.jpg"
+                />
+                <source
+                  media="(max-width:799px)"
+                  srcset="./Assets/Images/Footer_Img_s.jpg"
+                />
+
+                <img
+                  class="Slider__Image"
+                  src="./Assets/Images/Footer_Img_b.jpg"
+                  alt="footer_Img"
+                />
+              </picture>
+            </div>
+            <div class="footer--darklayer"></div>
+            <div class="footer--columns container">
+              <div class="footer--col">
+                <div class="col__header">دسترسی آسان</div>
+                <div class="col__body">
+                  <ul>
+                    <li>پرسش های متداول</li>
+                    <li>قوانین ترخینه</li>
+                    <li>حریم خصوصی</li>
+                    <li class="col__body__icon">
+                      <span
+                        ><svg class="icon">
+                          <use
+                            href="./Assets/Images/svg-sprite.svg#twitter"
+                          ></use>
+                        </svg>
+                      </span>
+                      <span
+                        ><svg class="icon">
+                          <use
+                            href="./Assets/Images/svg-sprite.svg#telegram"
+                          ></use>
+                        </svg>
+                      </span>
+                      <span
+                        ><svg class="icon">
+                          <use
+                            href="./Assets/Images/svg-sprite.svg#linkedin"
+                          ></use>
+                        </svg>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer--col">
+                <div class="col__header">شعبه های ترخینه</div>
+                <div class="col__body">
+                  <ul>
+                    <li>شعبه اکباتان</li>
+                    <li>شعبه چالوس</li>
+                    <li>شعبه اقدسیه</li>
+                    <li>شعبه ونک</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer--col__form">
+                <div class="col__header">پیام به ترخینه</div>
+                <div class="col__body">
+                  <form>
+                    <div class="form__txt">
+                      <input type="text" placeholder="نام و نام خانوادگی" />
+                      <input type="tel" placeholder="شماره تماس" />
+                      <input
+                        type="email"
+                        placeholder="آدرس ایمیل (اختیاری)"
+                        dir="ltr"
+                      />
+                    </div>
+                    <div class="form__msg">
+                      <textarea name="" id="" placeholder="پیام شما"></textarea>
+                    </div>
+                    <button class="button" type="submit">ارسال پیام</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

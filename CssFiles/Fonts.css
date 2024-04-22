@@ -1,0 +1,49 @@
+/* Display_Font */
+@font-face {
+  font-family: Estedat_Display;
+  src: url(../Assets/Fonts/fonts/webfonts/statics/Estedad-Bold.woff2);
+}
+
+/* Body_Font */
+@font-face {
+  font-family: Estedat_Body;
+  src: url(../Assets/Fonts/fonts/webfonts/statics/Estedad-Regular.woff2);
+}
+
+/* Heading_Font */
+@font-face {
+  font-family: Estedat_H;
+  src: url(../Assets/Fonts/fonts/webfonts/statics/Estedad-Bold.woff2);
+}
+
+@font-face {
+  font-family: Estedat_H7;
+  src: url(../Assets/Fonts/fonts/webfonts/statics/Estedad-SemiBold.woff2);
+}
+
+/* Caption_Font */
+@font-face {
+  font-family: Estedat_Caption-md;
+  src: url(../Assets/Fonts/fonts/webfonts/statics/Estedad-Regular.woff2);
+}
+@font-face {
+  font-family: Estedat_Caption-lg;
+  src: url(../Assets/Fonts/fonts/webfonts/statics/Estedad-Bold.woff2);
+}
+
+/* Button_Font */
+
+@font-face {
+  font-family: Estedat_Button;
+  src: url(../Assets/Fonts/fonts/webfonts/statics/Estedad-Medium.woff2);
+}
+
+/* OverLine_Font */
+@font-face {
+  font-family: Estedat_Overline-LG;
+  src: url(../Assets/Fonts/fonts/webfonts/statics/Estedad-Regular.woff2);
+}
+@font-face {
+  font-family: Estedat_Overline-SM;
+  src: url(../Assets/Fonts/fonts/webfonts/statics/Estedad-Bold.woff2);
+}
